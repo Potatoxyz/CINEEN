@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <title>CINEEN</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<style>
+		.top-banner {
+			background-color: rgba(255, 255, 255, 0.55);
+		}
+		.top-banner a {
+			color: #019135;
+		}
+		h1 {
+			margin-top: 100px;
+			font-family: 'Microsoft Yahei';
+			font-size: 36px;
+			color: #019157;
+		}		
+		</style>		
+		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	</head>
+	<body>
+	<div class="head">
+		<img src="./images/logogo.png" alt="logo" height="60">
+	</div>
+		<div class="container">
+			<div class="wrapper">
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="#"><img src="images/1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3></h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h3></h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/3.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3></h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/4.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3></h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/5.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3></h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/6.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3></h3>
+						</div>
+					</li>
+				</ul>
+				<div id="shadow" class="shadow"></div>
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+			</div>
+			<div class="des-wrap">
+				<div class="des">
+					<h3 class="title"></h3>
+					<ul></ul>
+					<a id="buyLink" href="#" class="button red" target="_blank">BUY IT NOW !</a>
+				</div>
+			</div>
+		</div>
+	<div class="footer">
+		<p>&copy;Copyright 2018 by CINEEN</p>
+	</div>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+            const productList=[
+                {id:1,smallTitle:'Fashion Women Hair',title:'CINEEN Fashion Women Hair Bun Maker Tool French Twist Hairstyle Clip DIY Girls Hair Styling Curler 2 Pcs',link:'https://www.amazon.co.uk/dp/B073S7RZCS',des:['Material: Synthetic Hair, Spring Material.','Design: Ideal Hair Tool For Creating a perfect Bun. Perfect For All ages. Keeps Hair Out Of Your Face, reasonable design.','Occasions: home, daily life, party, shopping, work, school, night out party, wedding, graduation, prom, ballet recital, yoga practice, et']},
+
+                {id:2,smallTitle:'Toiletry Waterproof Cosmetic/Wash Organizer Bag(Blue)',title:'CINEEN Multifunctional Portable Hanging Travel Toiletry Waterproof Cosmetic/Wash Organizer Bag For Men & Women Blue',link:'https://www.amazon.co.uk/dp/B01KHAGB9G',des:['Multi-function: This compact cosmetic bag can be taken on any trip as a handy travel companion for outdoor camping, mountain climbing, holidays, business trips, the gym, etc.','Good quality: Made of high-quality water-resistant, Ripstop nylon fabric, which is lightweight and durable.','Portable: Top half has a hook ideal for hanging in a bathroom. Ideal for keeping all of your cosmetics clean and in order.']},
+
+                {id:3,smallTitle:'Toiletry Waterproof Cosmetic/Wash Organizer Bag(Pink)',title:'CINEEN Multifunctional Portable Hanging Travel Toiletry Waterproof Cosmetic/Wash Organizer Bag For Men & Women Pink.',link:'https://www.amazon.co.uk/dp/B01KHAG8PS',des:['Multi-function: This compact cosmetic bag can be taken on any trip as a handy travel companion for outdoor camping, mountain climbing, holidays, business trips, the gym, etc.','Good quality: Made of high-quality water-resistant, Ripstop nylon fabric, which is lightweight and durable.','Portable: Top half has a hook ideal for hanging in a bathroom. Ideal for keeping all of your cosmetics clean and in order.']},
+
+                {id:4,smallTitle:'Handbag Multi-color Bag',title:'CINEEN Women’s Make Up Bag Small Cosmetic Wash Bag Waterproof Travel Purse Shape Bags Toiletry Bag Handbag Multi-color Bag',link:'https://www.amazon.co.uk/dp/B01N7GBYPH',des:['Cosmetic Bag Keep your make-up and cosmetics organized and securely in your such a big make-up bag.','It is easy to wear, easy clean, long lasting, but looks good and performs even better.','Waterproof material - these waterproof polyester extinguishing water not too easy to penetrate.']},
+
+                {id:5,smallTitle:'Cosmetic/Wash Organizer Bag green',title:'CINEEN Multifunctional Portable Hanging Waterproof Cosmetic/Wash Organizer Bag green',link:'https://www.amazon.co.uk/dp/B01KHAGCAE',des:['Multi-function: This compact cosmetic bag can be taken on any trip as a handy travel companion for outdoor camping, mountain climbing, holidays, business trips, the gym, etc. Good quality: Made of high-quality water-resistant, Ripstop nylon fabric, which is lightweight and durable.','Portable: Top half has a hook ideal for hanging in a bathroom. Consists of an inner zip compartment perfect for face and hair creams, lip balms and other small items. Bottom half can hold larger items such as shampoo, conditioner, deodorant, soap, cosmetics, etc.Ideal for keeping all of your cosmetics clean and in order.','Waterproof, practical design, breathable and fast-drying.','Good quality – Made of high-quality water-resistant, Ripstop nylon fabric, which is lightweight and durable.']},
+
+                {id:6,smallTitle:'Toiletry Bag Handbag Multi-color Bag',title:'CINEEN Women’s Make Up Bag Small Cosmetic Wash Bag Waterproof Travel Purse Shape Bags Toiletry Bag Handbag Multi-color Bag',link:'https://www.amazon.co.uk/dp/B01LQ8YNB6',des:['Cosmetic Bag Keep your make-up and cosmetics organized and securely in your such a big make-up bag.','It is easy to wear, easy clean, long lasting, but looks good and performs even better.','Waterproof material - these waterproof polyester extinguishing water not too easy to penetrate.']},
+
+            ];
+			$(function() {
+				var Page = (function() {
+				    var currentId=1;
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$navOptions = $( '#nav-options' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+								$navArrows.show();
+								$navOptions.show();
+							},
+							orientation : 'h',
+							cuboidsCount : 3
+						} ),
+						init = function() {
+							initEvents();
+                            showSmallTile();
+                            showDes(1);
+						},
+						showSmallTile=function () {
+							$('#sb-slider li .sb-description h3').each(function (index,el) {
+                                productList.forEach(function (val,index1) {
+                                    if(index==index1)$(el).text(val.smallTitle);
+								});
+                            })
+                        };
+						showDes=function (id) {
+					    	var obj;
+                            $('.des-wrap .des ul').empty();
+                            productList.forEach(function (t) {
+                                if(t.id==id){
+                                    obj=t;
+								}
+							});
+                            if(obj){
+                                $('.des-wrap .title').text(obj.title);
+                                obj.des.forEach(function (value,index) {
+                                    $('<li>').text(value).appendTo($('.des-wrap .des ul'));
+                                });
+                                $('#buyLink').attr('href',obj.link);
+							}
+                        };
+						initEvents = function() {
+							$navArrows.children( ':first' ).on( 'click', function() {
+								slicebox.next();
+								if(currentId<6)currentId++;
+								else currentId=1;
+                                showDes(currentId);
+								return false;
+							} );
+							$navArrows.children( ':last' ).on( 'click', function() {
+								slicebox.previous();
+                                if(currentId>1)currentId--;
+                                else currentId=6;
+                                showDes(currentId);
+								return false;
+							} );
+						};
+						return { init : init };
+
+				})();
+				Page.init();
+
+			});
+		</script>
+	</body>
+</html>	
